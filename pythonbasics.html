@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Python - Basics</title>
+
+    <style>
+        .box {
+            border: 1px;
+            padding: 10px;
+            box-shadow: 5px 5px lightgray;
+        }
+
+        img {
+            max-width: 100%;
+            /* Ensures the image never exceeds the width of its container */
+            height: auto;
+            /* Maintains the aspect ratio */
+            display: block;
+            /* Optional: Helps with layout issues */
+        }
+
+        hr {
+            border: none;
+            /* Removes the default border and 3D effect */
+            height: 2px;
+            /* Sets the thickness of the line */
+            background-color: #333;
+            /* Sets the color of the line */
+            margin: 20px 0;
+            /* Adds spacing above and below the line */
+        }
+
+        h5 {
+            color: rgb(100, 87, 13);
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        p {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: purple;
+            font-weight: bold;
+            line-height: 1.5;
+            margin-bottom: 1em;
+            text-align: center;
+            background-color: darkseagreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-warning navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">
+            <img src="./assets/images/lslogo.jpg" alt="logo" style="width:40px;">
+        </a>
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" style="color: black;">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color: black;">Link 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color: black;">Link 3</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container-fluid bg-light" style="margin-top: 15px; margin-bottom: 15px;">
+        <div class="row">
+            <div class="col-lg-2 col-md-6 col-sm-12">
+                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo"
+                    style="margin-top: 2px;">Links</button>
+                <div id="demo" class="collapse" style="margin-top: 2px;">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonpg1.html">Python Introduction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pyinstallation.html">Python Installation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlists.html">Python Lists</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-10 col-md-6 col-sm-12">
+                <h2
+                    style="text-align: center; color: purple; font-weight: bold; font-family: cursive; text-shadow: 2px 1px gold">
+                    Python Basics</h2>
+                <div class="">
+                    <p>/* printing hello-world program in python */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p>print("hello-world")</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <img src="./assets/images/helloworld.png" width="300" height="150">
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* printing a text in python with multiple spaces */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p>print("python is a"+" "+"coding language and"+" "+"it is easy to learn.")</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <img src="./assets/images/stringspy.png" width="500" height="200">
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* string concatination -- combining two sentences into one sentence */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p>print("python is used for web development, ", end="")</p>
+                        <p>print("mathematics and software development.")</p>
+
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <img src="./assets/images/stringconcat.png" width="500" height="200">
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* line breaking in python */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p>print("maruti company cars are: \n alto, \n s presso, \n swift, \n wagon r")</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <img src="./assets/images/pytlinebreak.png" width="500" height="200">
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* separator concept in python */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p>print("abc", "def", "xyz") # without separator</p>
+                        <p> print("abc", "def", "xyz", sep=",") # with comma separator</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <img src="./assets/images/separator.png" width="500" height="200">
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* printing datatypes in python */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p>print(100)</p>
+                        <p>print(20.55)</p>
+                        <p>print("warangal")</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <img src="./assets/images/datatypes.png" width="500" height="200">
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* variables in python */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p>a = 10</p>
+                        <p>b = 20</p>
+                        <p>c = a+b</p>
+                        <p>print(c)</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <img src="./assets/images/variable.png" width="500" height="200">
+                </div>
+                <h5>Code with f-string:</h5>
+                <div class="">
+                    <p>/* variables in python with f-string */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p>a = 10</p>
+                        <p>b = 20</p>
+                        <p>c = a*b</p>
+                        <p>d = f"the value of a*b is : {c}"</p>
+                        <p>print(d)</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <img src="./assets/images/fstring.png" width="500" height="200">
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* input value in python */</p>
+                    <h5>Code: Example-1</h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p>name = input("enter your name: ")</p>
+                        <p>print(name)</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <img src="./assets/images/inputpy.png" width="500" height="200">
+                </div>
+                <div class="">
+                    <p>/* input value in python */</p>
+                    <h5>Code: Example-2</h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p>username = input("enter username: ")</p>
+                        <p>gender = input("enter gender: ")</p>
+                        <p>print(f"username is: {username} : gender is: {gender}")</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <img src="./assets/images/inputpy2.png" width="500" height="200">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
