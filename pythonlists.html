@@ -4,11 +4,365 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lists</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Python - Basics</title>
+
+    <script>
+
+        document.addEventListener("contextmenu", (event) => {
+            event.preventDefault();
+        });
+
+    </script>
+
+    <style>
+        .box {
+            border: 1px;
+            padding: 10px;
+            box-shadow: 5px 5px lightgray;
+        }
+
+        .text-card-box {
+            /* Basic Card Styling */
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px lightblue;
+            /* Soft, standard card shadow */
+        }
+
+        img {
+            max-width: 100%;
+            /* Ensures the image never exceeds the width of its container */
+            height: auto;
+            /* Maintains the aspect ratio */
+            display: block;
+            /* Optional: Helps with layout issues */
+        }
+
+        hr {
+            border: none;
+            /* Removes the default border and 3D effect */
+            height: 2px;
+            /* Sets the thickness of the line */
+            background-color: #333;
+            /* Sets the color of the line */
+            margin: 20px 0;
+            /* Adds spacing above and below the line */
+        }
+
+        h5 {
+            color: rgb(100, 87, 13);
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 5px;
+        }
+
+        p {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: purple;
+            font-weight: bold;
+            line-height: 1.5;
+            margin-bottom: 1em;
+            text-align: center;
+            background-color: darkseagreen;
+        }
+    </style>
 </head>
 
 <body>
-    <h2>WELCOME TO PYTHON LISTS</h2>
+
+    <nav class="navbar navbar-expand-sm bg-warning navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">
+            <img src="./assets/images/lslogo.jpg" alt="logo" style="width:40px;">
+        </a>
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" style="color: black;">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color: black;">Link 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color: black;">Link 3</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container-fluid bg-light" style="margin-top: 15px; margin-bottom: 15px;">
+        <div class="row">
+            <div class="col-lg-2 col-md-6 col-sm-12">
+                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo"
+                    style="margin-top: 2px;">Links</button>
+                <div id="demo" class="collapse" style="margin-top: 2px;">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonpg1.html">Python Introduction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pyinstallation.html">Python Installation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pythonlists.html">Python Basics</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-10 col-md-6 col-sm-12">
+                <h2
+                    style="text-align: center; color: purple; font-weight: bold; font-family: cursive; text-shadow: 2px 1px gold">
+                    Python Lists</h2>
+                <div class="card text-card-box">
+                    <h5> List: </h5>
+                    <ul>
+                        <li> Lists are used to store multiple items in a single variable. </li>
+                        <li> Lists are one of 4 built-in data types in Python used to store collections of data. </li>
+                        <li> Lists are created using square brackets. </li>
+                    </ul>
+                </div>
+                <div class="card text-card-box">
+                    <h5>List Items:</h5>
+                    <ul>
+                        <li> List items are ordered, changeable, and allow duplicate values. </li>
+                        <li> List items are indexed, the first item has index [0], the second item has index [1] etc.
+                        </li>
+                    </ul>
+                </div>
+                <div class="card text-card-box">
+                    <h5>List Ordered:</h5>
+                    <ul>
+                        <li> Lists follows an particular (or) given order and that order will not change. </li>
+                        <li> If you add new items to a list, the new items will be placed at the end of the list. </li>
+                    </ul>
+                </div>
+                <div class="card text-card-box">
+                    <h5>Changeable (or) Mutable List:</h5>
+                    <ul>
+                        <li>The list is changeable, that means we can change, add, and remove items in a list after it
+                            has been created.</li>
+                    </ul>
+                </div>
+                <div class="card text-card-box">
+                    <h5>Allow Duplicates in List:</h5>
+                    <ul>
+                        <li>Lists can have items with the same value, same names, etc.</li>
+                    </ul>
+                </div>
+                <p></p>
+                <div class="">
+                    <p>/* Accessing the list in python */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p>vegetables = ["potato", "carrot", "tomato", "brinjal"]</p>
+                        <p>print(vegetables)</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['potato', 'carrot', 'tomato', 'brinjal']</output>
+                    <p></p>
+
+                    <!-- <img src="./assets/images/vegitables.png" width="300" height="150"> -->
+
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* Accessing list with index */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> print(vegetables[0]) </p>
+                        <p> print(vegetables[1]) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">
+                        <div>potato</div>
+                        <div>carrot</div>
+                    </output>
+                    <p></p>
+                    <!-- <img src="./assets/images/veg1.png" width="500" height="200"> -->
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* Adding items in the list */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables.append("cauliflower") </p>
+                        <p> vegetables.append("ladyfinger") </p>
+                        <p>print(vegetables)</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['potato', 'carrot', 'tomato', 'brinjal', 'cauliflower',
+                        'ladyfinger']</output>
+                    <p></p>
+                    <!-- <img src="./assets/images/addvegi.png" width="500" height="200"> -->
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* Inserting items in the list at a particular index position */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables.insert(4, "cabbage") </p>
+                        <p> vegetables.insert(5, "bottleguard") </p>
+                        <p>print(vegetables)</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['potato', 'carrot', 'tomato', 'brinjal', 'cabbage', 'bottleguard',
+                        'cauliflower', 'ladyfinger']</output>
+                    <p></p>
+                    <!-- <img src="./assets/images/insertvegi.png" width="500" height="400" class="img1"> -->
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* updating items in the list at a particular index position */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables[1:3] = ["bitterguard", "radish"] </p>
+                        <p> print(vegetables) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['potato', 'bitterguard', 'radish', 'brinjal', 'cabbage',
+                        'bottleguard', 'cauliflower', 'ladyfinger']</output>
+                    <p></p>
+                    <!-- <img src="./assets/images/separator.png" width="500" height="200"> -->
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* removing items in the list from the last */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables.pop() </p>
+                        <p> vegetables.pop() </p>
+                        <p> print(vegetables) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['potato', 'bitterguard', 'radish', 'brinjal', 'cabbage',
+                        'bottleguard']</output>
+                    <p></p>
+                    <!-- <img src="./assets/images/datatypes.png" width="500" height="200"> -->
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* removing selected items in the list */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables.remove("radish") </p>
+                        <p> print(vegetables) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['potato', 'bitterguard', 'brinjal', 'cabbage',
+                        'bottleguard']</output>
+                    <p></p>
+                    <!-- <img src="./assets/images/variable.png" width="500" height="200"> -->
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* reversing the items in the list */</p>
+                    <h5>Code:</h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables.reverse() </p>
+                        <p> print(vegetables) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['bottleguard', 'cabbage', 'brinjal', 'bitterguard',
+                        'potato']</output>
+                    <p></p>
+                    <!-- <img src="./assets/images/inputpy.png" width="500" height="200"> -->
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* deleting all the list items */</p>
+                    <h5>Code:</h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p>vegetables.clear() </p>
+                        <p>print(vegetables) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">[]</output>
+                    <p></p>
+                    <!-- <img src="./assets/images/inputpy.png" width="500" height="200"> -->
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* zip is a method used to combine multiple elements into a single element (list) */</p>
+                    <h5>Code:</h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> tech = ["html", "java", "css", "python"] </p>
+                        <p> course = ["frontend", "backend", "frontend", "backend"] </p>
+                        <p> result = list(zip(tech, course)) </p>
+                        <p> print(result) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">[('html', 'frontend'), ('java', 'backend'), ('css', 'frontend'),
+                        ('python', 'backend')]</output>
+                    <p></p>
+                    <!-- <img src="./assets/images/inputpy.png" width="500" height="200"> -->
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* Number of duplicate items counts in the list */</p>
+                    <h5>Code:</h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables.append("cabbage") </p>
+                        <p> vegetables.append("potato") </p>
+                        <p> print(vegetables) </p>
+                        <p> print(vegetables.count("cabbage")) </p>
+                        <p> print(vegetables.count("potato")) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">
+                        <div>['bottleguard', 'cabbage', 'brinjal', 'bitterguard', 'potato', 'cabbage', 'potato']</div>
+                        <div>
+                            <div>2</div>
+                            <div>2</div>
+                        </div>
+                    </output>
+                    <p></p>
+                    <!-- <img src="./assets/images/inputpy.png" width="500" height="200"> -->
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* Total number of items in the list */</p>
+                    <h5>Code:</h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p>print(len(vegetables))</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">7</output>
+                    <p></p>
+                    <!-- <img src="./assets/images/inputpy.png" width="500" height="200"> -->
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
