@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Python - List</title>
+    <title>HTML CONTENT</title>
 
     <script>
 
@@ -61,7 +61,7 @@
             font-family: 'Times New Roman', Times, serif;
             padding: 5px;
         }
-
+        /*
         p {
             font-family: Arial, sans-serif;
             font-size: 16px;
@@ -73,6 +73,7 @@
             text-align: center;
             background-color: darkseagreen;
         }
+        */
     </style>
 </head>
 
@@ -90,7 +91,7 @@
                 <a class="nav-link" href="index.html" style="color: black;">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="htmlcontent.html" style="color: black;">HTML</a>
+                <a class="nav-link" href="pythonpg1.html" style="color: black;">Python</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" style="color: black;">Link 3</a>
@@ -105,13 +106,13 @@
                 <div id="demo" class="collapse" style="margin-top: 2px;">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="pythonpg1.html">Python Introduction</a>
+                            <a class="nav-link" href="#htmlintroduction">HTML Introduction</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pyinstallation.html">Python Installation</a>
+                            <a class="nav-link" href="#typesoftags">Types of Tags</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pythonbasics.html">Python Basics</a>
+                            <a class="nav-link" href="#htmltags">HTML Tags</a>
                         </li>
                     </ul>
                 </div>
@@ -119,44 +120,115 @@
             <div class="col-lg-10 col-md-6 col-sm-12">
                 <h2
                     style="text-align: center; color: purple; font-weight: bold; font-family: cursive; text-shadow: 2px 1px gold">
-                    Python Lists</h2>
+                    WHAT IS HTML?</h2>
                 <div class="card text-card-box">
-                    <h5> List: </h5>
+                    <h5 id="htmlintroduction"><u>HTML:</u></h5>
                     <ul>
-                        <li> Lists are used to store multiple items in a single variable. </li>
-                        <li> Lists are one of 4 built-in data types in Python used to store collections of data. </li>
-                        <li> Lists are created using square brackets. </li>
+                        <li>HTML is a Hyper Text Markup Language.</li>
+                        <li>The purpose of html is to create web pages(static).</li>
+                        <li>It is not a case sensitive language.</li>
+                        <li>It is an interpreter language.</li>
+                        <li>It communicates with the browser.</li>
                     </ul>
                 </div>
                 <div class="card text-card-box">
-                    <h5>List Items:</h5>
-                    <ul>
-                        <li> List items are ordered, changeable, and allow duplicate values. </li>
-                        <li> List items are indexed, the first item has index [0], the second item has index [1] etc.
-                        </li>
-                    </ul>
+                    <h5 id="typesoftags"><u>Types of Tags:</u></h5>
+                    <ol>
+                        <li>Paired Tags.</li>
+                        <li>Unpaired Tags.</li>
+                    </ol>
                 </div>
                 <div class="card text-card-box">
-                    <h5>List Ordered:</h5>
-                    <ul>
-                        <li> Lists follows an particular (or) given order and that order will not change. </li>
-                        <li> If you add new items to a list, the new items will be placed at the end of the list. </li>
-                    </ul>
+                    <h5><u>PAIRED TAGS:</u></h5>
+                        <p>Tags that are having both open and close tags with the content in between are called paired tags.</p>
+                        <p><b>Syntax:</b> &lt;tag name&gt;content&lt;/tag name&gt;</p>
+                        <p><b>Example:</b> &lt;p&gt;Describes Paragraph&lt;/p&gt;</p>
+                            <hr>
+                        <h5><u>UNPAIRED TAGS:</u></h5>
+                        <p>Tags that are having only open tag but not close tag are called unpaired tags.</p>
+                        <p><b>Syntax:</b> &lt;tag name&gt;</p>
+                        <p><b>Example:</b> &lt;hr&gt; Describes Horizontal line.</p>
+                        <p><b>Example:</b> &lt;br&gt; Describes Single line break.</p>
                 </div>
                 <div class="card text-card-box">
-                    <h5>Changeable (or) Mutable List:</h5>
+                    <h5 id="htmltags"><u>Essential HTML Tags:</u></h5>
                     <ul>
-                        <li>The list is changeable, that means we can change, add, and remove items in a list after it
-                            has been created.</li>
+                        <li><b>&lt;html&gt;</b></li> <p>The root element that encloses the entire HTML document.</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;head&gt;</b></li> <p>Contains meta-information about the page, such as its title, character set, and   links to stylesheets, which is not visible to the user.</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;title&gt;</b></li> <p>Sets the title of the web page, which appears in the browser's title bar or tab.</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;body&gt;</b></li> <p>Contains all the visible content of the web page, including text, images, and links.</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;h1&gt; to &lt;h6&gt;</b></li> <p>Describes Headings, <b>h1</b> is the largest size and <b>h6</b> is the smallest size.</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;p&gt;</b></li> <p>Defines paragraph of text.</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;b&gt;</b></li> <p>Defines the thickness (bold) of a text.</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;a&gt;</b></li> <p>Anchor tag used for page navigation by creating a hyperlink.</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;ul&gt; and &lt;ol&gt;</b></li> <p>Creates unordered lists (bullet points) and ordered lists (numbers).</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;li&gt;</b></li> <p>Defines list items within &lt;ul&gt; and &lt;ol&gt;.</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;div&gt;</b></li> <p>Used for making separate divisions</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;i&gt;</b></li> <p>Defines italic font style.</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;strong&gt;</b></li> <p>Defines important text. The content inside is typically displayed in <b>bold.</b></p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;span&gt;</b></li> <p>Used to mark a part of text by adding inline css.</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;form&gt;</b></li> <p>Creates a form for user inputs.</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;bdo&gt;</b></li> <p>tag is used to override the current text direction. It stands for Bi-Directional Override.</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;button&gt;</b></li> <p>Defines a clickable button.</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;blackquote&gt;</b></li> <p>Specifies a section that is quoted from another source.</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;br&gt;</b></li> <p>Defines single line breaks.</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;caption&gt;</b></li> <p>Defines the table caption. tag must be inserted immediately after the &lt;table&gt; tag.</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;col&gt;</b></li> <p>Specifies column properties for each column within a &lt;colgroup&gt; element.</p>
+                    </ul>
+                    <ul>
+                        <li><b>&lt;colgroup&gt;</b></li> <p>specifies a group of one or more columns in a table for formatting.</p>
                     </ul>
                 </div>
+                <!--
                 <div class="card text-card-box">
                     <h5>Allow Duplicates in List:</h5>
                     <ul>
                         <li>Lists can have items with the same value, same names, etc.</li>
                     </ul>
                 </div>
+                -->
                 <p></p>
+                <!-- 
                 <div class="">
                     <p>/* Accessing the list in python */</p>
                     <h5>Code: </h5>
@@ -170,10 +242,12 @@
                     <output class="text-card-box">['potato', 'carrot', 'tomato', 'brinjal']</output>
                     <p></p>
 
-                    <!-- <img src="./assets/images/vegitables.png" width="300" height="150"> -->
+                     <img src="./assets/images/vegitables.png" width="300" height="150"> 
 
                 </div>
+                
                 <hr>
+
                 <div class="">
                     <p>/* Accessing list with index */</p>
                     <h5>Code: </h5>
@@ -189,7 +263,7 @@
                         <div>carrot</div>
                     </output>
                     <p></p>
-                    <!-- <img src="./assets/images/veg1.png" width="500" height="200"> -->
+                    <img src="./assets/images/veg1.png" width="500" height="200">
                 </div>
                 <hr>
                 <div class="">
@@ -206,7 +280,7 @@
                     <output class="text-card-box">['potato', 'carrot', 'tomato', 'brinjal', 'cauliflower',
                         'ladyfinger']</output>
                     <p></p>
-                    <!-- <img src="./assets/images/addvegi.png" width="500" height="200"> -->
+                    <img src="./assets/images/addvegi.png" width="500" height="200">
                 </div>
                 <hr>
                 <div class="">
@@ -223,7 +297,7 @@
                     <output class="text-card-box">['potato', 'carrot', 'tomato', 'brinjal', 'cabbage', 'bottleguard',
                         'cauliflower', 'ladyfinger']</output>
                     <p></p>
-                    <!-- <img src="./assets/images/insertvegi.png" width="500" height="400" class="img1"> -->
+                    <img src="./assets/images/insertvegi.png" width="500" height="400" class="img1"> 
                 </div>
                 <hr>
                 <div class="">
@@ -239,7 +313,7 @@
                     <output class="text-card-box">['potato', 'bitterguard', 'radish', 'brinjal', 'cabbage',
                         'bottleguard', 'cauliflower', 'ladyfinger']</output>
                     <p></p>
-                    <!-- <img src="./assets/images/separator.png" width="500" height="200"> -->
+                     <img src="./assets/images/separator.png" width="500" height="200"> 
                 </div>
                 <hr>
                 <div class="">
@@ -256,7 +330,7 @@
                     <output class="text-card-box">['potato', 'bitterguard', 'radish', 'brinjal', 'cabbage',
                         'bottleguard']</output>
                     <p></p>
-                    <!-- <img src="./assets/images/datatypes.png" width="500" height="200"> -->
+                     <img src="./assets/images/datatypes.png" width="500" height="200"> 
                 </div>
                 <hr>
                 <div class="">
@@ -272,7 +346,7 @@
                     <output class="text-card-box">['potato', 'bitterguard', 'brinjal', 'cabbage',
                         'bottleguard']</output>
                     <p></p>
-                    <!-- <img src="./assets/images/variable.png" width="500" height="200"> -->
+                     <img src="./assets/images/variable.png" width="500" height="200"> 
                 </div>
                 <hr>
                 <div class="">
@@ -288,7 +362,7 @@
                     <output class="text-card-box">['bottleguard', 'cabbage', 'brinjal', 'bitterguard',
                         'potato']</output>
                     <p></p>
-                    <!-- <img src="./assets/images/inputpy.png" width="500" height="200"> -->
+                     <img src="./assets/images/inputpy.png" width="500" height="200"> 
                 </div>
                 <hr>
                 <div class="">
@@ -303,7 +377,7 @@
                 <div class="card box" style="width: auto; display: inline-block;">
                     <output class="text-card-box">[]</output>
                     <p></p>
-                    <!-- <img src="./assets/images/inputpy.png" width="500" height="200"> -->
+                     <img src="./assets/images/inputpy.png" width="500" height="200"> 
                 </div>
                 <hr>
                 <div class="">
@@ -321,7 +395,7 @@
                     <output class="text-card-box">[('html', 'frontend'), ('java', 'backend'), ('css', 'frontend'),
                         ('python', 'backend')]</output>
                     <p></p>
-                    <!-- <img src="./assets/images/inputpy.png" width="500" height="200"> -->
+                     <img src="./assets/images/inputpy.png" width="500" height="200"> 
                 </div>
                 <hr>
                 <div class="">
@@ -345,7 +419,7 @@
                         </div>
                     </output>
                     <p></p>
-                    <!-- <img src="./assets/images/inputpy.png" width="500" height="200"> -->
+                     <img src="./assets/images/inputpy.png" width="500" height="200"> 
                 </div>
                 <hr>
                 <div class="">
@@ -359,8 +433,9 @@
                 <div class="card box" style="width: auto; display: inline-block;">
                     <output class="text-card-box">7</output>
                     <p></p>
-                    <!-- <img src="./assets/images/inputpy.png" width="500" height="200"> -->
+                     <img src="./assets/images/inputpy.png" width="500" height="200"> 
                 </div>
+                -->
             </div>
         </div>
     </div>
