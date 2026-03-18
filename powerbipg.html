@@ -4,20 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>powerbi - page1</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>POWER BI CONTENT</title>
+
+    <script>
+
+        document.addEventListener("contextmenu", (event) => {
+            event.preventDefault();
+        });
+
+    </script>
 
     <style>
-        @media screen and (max-width: 600px) {
-            .myImg1 {
-                width: 100%;
-                height: auto;
-            }
+        .box {
+            border: 1px;
+            padding: 10px;
+            box-shadow: 5px 5px lightgray;
         }
+
+        .text-card-box {
+            /* Basic Card Styling */
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px lightblue;
+            /* Soft, standard card shadow */
+        }
+
+        img {
+            max-width: 100%;
+            /* Ensures the image never exceeds the width of its container */
+            height: auto;
+            /* Maintains the aspect ratio */
+            display: block;
+            /* Optional: Helps with layout issues */
+        }
+
+        hr {
+            border: none;
+            /* Removes the default border and 3D effect */
+            height: 2px;
+            /* Sets the thickness of the line */
+            background-color: #333;
+            /* Sets the color of the line */
+            margin: 20px 0;
+            /* Adds spacing above and below the line */
+        }
+
+        h5 {
+            color: rgb(100, 87, 13);
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 5px;
+        }
+        /*
+        p {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: purple;
+            font-weight: bold;
+            line-height: 1.5;
+            margin-bottom: 1em;
+            padding: 5px;
+            text-align: center;
+            background-color: darkseagreen;
+        }
+        */
     </style>
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-sm bg-warning navbar-dark">
         <!-- Brand/logo -->
         <a class="navbar-brand" href="#">
@@ -27,17 +88,364 @@
         <!-- Links -->
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#" style="color: black;">Link 1</a>
+                <a class="nav-link" href="index.html" style="color: black;">HOME</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" style="color: black;">Link 2</a>
+                <a class="nav-link" href="pythonpg1.html" style="color: black;">PYTHON</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" style="color: black;">Link 3</a>
+                <a class="nav-link" href="htmlcontent.html" style="color: black;">HTML</a>
             </li>
         </ul>
     </nav>
-    <p>Welcome to Powerbi, content will be uploaded soon.</p>
+    <div class="container-fluid bg-light" style="margin-top: 15px; margin-bottom: 15px;">
+        <div class="row">
+            <div class="col-lg-2 col-md-6 col-sm-12">
+                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo"
+                    style="margin-top: 2px;">Links</button>
+                <div id="demo" class="collapse" style="margin-top: 2px;">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#powerbi">POWER BI Introduction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#powerbitools">Tools of POWER BI</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#gateway">Gateway Types</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-10 col-md-6 col-sm-12">
+                <h2
+                    style="text-align: center; color: purple; font-weight: bold; font-family: cursive; text-shadow: 2px 1px gold">
+                    WHAT IS POWER BI?</h2>
+                <div class="card text-card-box">
+                    <h5 id="powerbi"><u>POWER BI:</u></h5>
+                        <p>
+                            It is a Data Visualization and Business Intelligence tool which helps to convert 
+                            data from different data sources into interactive dashboards and BI reports.
+                        </p>
+                        <p>
+                            It provides visualization with self service business intelligence
+                            where end users can create reports and dashboards by themselves, 
+                            without depending on IT staff or database administrators.
+                        </p>
+                </div>
+                <div class="card text-card-box">
+                    <h5 id="typesoftags"><u>What is Business Intelligence:</u></h5>
+                        <p>	It is the collection of methods and tools that analyze raw data.</p>
+                        <p>
+                            It refers to strategies and methods used by companies for performing data analysis 
+                            of any business information.
+                        </p>
+                        <p>
+                            BI works on ETL process i.e. extraction, transformation and loading of data in a database, 
+                            which includes data mining, online analytical processing and business reporting.
+                        </p>
+                        <p>	Organizations use BI to improve their performance and operations effectively.</p>
+                </div>
+                <div class="card text-card-box">
+                    <h3 id="powerbitools" style="color: purple; font-weight: bold; font-family: cursive; text-shadow: 2px 1px gold">Power BI tools:</h3>
+                    <h5><u>1. Power BI Desktop</u></h5>
+                        <p>Main development tool for building reports and dashboards</p>
+                        <p>Connects to Excel, SQL, APIs, cloud data, etc.</p>
+                        <p>Used For:</p>
+                            <ul>
+                                <li>data cleaning</li>
+                                <li>modelling</li>
+                                <li>DAX calculations</li>
+                                <li>visual creation</li>
+                            </ul>
+                        <hr>
+                    <h5><u>2. Power BI Service</u></h5>
+                        <p>	Web version (online portal)	</p>
+                        <p>	Publish reports from Desktop	</p>
+                        <p>	Share dashboards with teams	</p>
+                        <p>	Schedule refresh	</p>
+                        <p>	Create apps and workspaces	</p>
+                        <hr>
+                    <h5><u>3. Power BI Mobile</u></h5>
+                        <p>	View dashboards on phone/tablet	</p>
+                        <p>	Real-time alerts	</p>
+                        <p>	Mobile-friendly monitoring	</p>
+                        <hr>
+                    <h5><u>4. Power BI Report Builder</u></h5>
+                        <p>Used for paginated reports (print-ready reports)</p>
+                        <p>Best for invoices, tables, operational reports</p>
+                        <hr>
+                    <h5><u>5. Power Query</u></h5>
+                        <p>	Data cleaning tool	</p>
+                        <p>	Remove duplicates	</p>
+                        <p>	Merge tables	</p>
+                        <p>	Transform columns	</p>
+                        <p>	Uses M language	</p>
+                        <hr>
+                    <h5><u>6. DAX (Data Analysis Expressions)</u></h5>
+                        <p>Formula language in Power BI</p>
+                        <p>Used for:</p>
+                            <ol type="a">
+                                <li>measures</li>
+                                <li>calculated columns</li>
+                                <li>KPIs</li>
+                            </ol>
+                        <hr>
+                    <h5><u>7. Power Bi Apps</u></h5>
+                        <p>These are mobile applications that are available for windows, iOS and android devices.</p>
+                        <p>You can share dashboards and reports with other users, which they can access on their smartphone over the internet.</p>
+                        <hr>
+                    <h5><u>8. Power Bi Gateway</u></h5>
+                            <p>
+                                It is installed by admin, acts as a bridge between the power bi and on-premises data sources such as 
+                                excel, DirectQuery, PowerApps, Azure analysis, etc,. 
+                            </p>
+                            <p>
+                                A Gateway is used to connect on-premises data sources (local servers, SQL databases, Excel files, SAP, etc.)
+                                 to Power BI cloud services.
+                            </p>
+                </div>
+                <div class="card text-card-box">
+                    <h3 id="gateway" style="color: purple; font-weight: bold; font-family: cursive; text-shadow: 2px 1px gold">Types of Gateway:</h3>
+                        <h5><u>On-premises Data Gateway (Standard Mode)</u></h5>
+                            <p>Used by multiple users</p>
+                            <p>Supports:</p>
+                                <ol type="I">
+                                    <li>Power BI</li>
+                                    <li>Microsoft Power Apps</li>
+                                    <li>Microsoft Power Automate</li>
+                                    <li>Azure Analysis Services</li>
+                                </ol>
+                            <p>Best for enterprise environments</p>
+                            <hr>
+                        <h5><u>On-premises Data Gateway (Personal Mode)</u></h5>
+                            <p>Supports:</p>
+                                <ol type="A">
+                                    <li>Used by single user</li>
+                                    <li>Only supports Power BI refresh</li>
+                                    <li>Simple for personal dashboards</li>
+                                </ol>
+                </div>
+                <!--
+                <div class="card text-card-box">
+                    <h5>Allow Duplicates in List:</h5>
+                    <ul>
+                        <li>Lists can have items with the same value, same names, etc.</li>
+                    </ul>
+                </div>
+                -->
+                <p></p>
+                <!-- 
+                <div class="">
+                    <p>/* Accessing the list in python */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p>vegetables = ["potato", "carrot", "tomato", "brinjal"]</p>
+                        <p>print(vegetables)</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['potato', 'carrot', 'tomato', 'brinjal']</output>
+                    <p></p>
+
+                     <img src="./assets/images/vegitables.png" width="300" height="150"> 
+
+                </div>
+                
+                <hr>
+
+                <div class="">
+                    <p>/* Accessing list with index */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> print(vegetables[0]) </p>
+                        <p> print(vegetables[1]) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">
+                        <div>potato</div>
+                        <div>carrot</div>
+                    </output>
+                    <p></p>
+                    <img src="./assets/images/veg1.png" width="500" height="200">
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* Adding items in the list */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables.append("cauliflower") </p>
+                        <p> vegetables.append("ladyfinger") </p>
+                        <p>print(vegetables)</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['potato', 'carrot', 'tomato', 'brinjal', 'cauliflower',
+                        'ladyfinger']</output>
+                    <p></p>
+                    <img src="./assets/images/addvegi.png" width="500" height="200">
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* Inserting items in the list at a particular index position */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables.insert(4, "cabbage") </p>
+                        <p> vegetables.insert(5, "bottleguard") </p>
+                        <p>print(vegetables)</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['potato', 'carrot', 'tomato', 'brinjal', 'cabbage', 'bottleguard',
+                        'cauliflower', 'ladyfinger']</output>
+                    <p></p>
+                    <img src="./assets/images/insertvegi.png" width="500" height="400" class="img1"> 
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* updating items in the list at a particular index position */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables[1:3] = ["bitterguard", "radish"] </p>
+                        <p> print(vegetables) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['potato', 'bitterguard', 'radish', 'brinjal', 'cabbage',
+                        'bottleguard', 'cauliflower', 'ladyfinger']</output>
+                    <p></p>
+                     <img src="./assets/images/separator.png" width="500" height="200"> 
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* removing items in the list from the last */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables.pop() </p>
+                        <p> vegetables.pop() </p>
+                        <p> print(vegetables) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['potato', 'bitterguard', 'radish', 'brinjal', 'cabbage',
+                        'bottleguard']</output>
+                    <p></p>
+                     <img src="./assets/images/datatypes.png" width="500" height="200"> 
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* removing selected items in the list */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables.remove("radish") </p>
+                        <p> print(vegetables) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['potato', 'bitterguard', 'brinjal', 'cabbage',
+                        'bottleguard']</output>
+                    <p></p>
+                     <img src="./assets/images/variable.png" width="500" height="200"> 
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* reversing the items in the list */</p>
+                    <h5>Code:</h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables.reverse() </p>
+                        <p> print(vegetables) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['bottleguard', 'cabbage', 'brinjal', 'bitterguard',
+                        'potato']</output>
+                    <p></p>
+                     <img src="./assets/images/inputpy.png" width="500" height="200"> 
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* deleting all the list items */</p>
+                    <h5>Code:</h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p>vegetables.clear() </p>
+                        <p>print(vegetables) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">[]</output>
+                    <p></p>
+                     <img src="./assets/images/inputpy.png" width="500" height="200"> 
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* zip is a method used to combine multiple elements into a single element (list) */</p>
+                    <h5>Code:</h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> tech = ["html", "java", "css", "python"] </p>
+                        <p> course = ["frontend", "backend", "frontend", "backend"] </p>
+                        <p> result = list(zip(tech, course)) </p>
+                        <p> print(result) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">[('html', 'frontend'), ('java', 'backend'), ('css', 'frontend'),
+                        ('python', 'backend')]</output>
+                    <p></p>
+                     <img src="./assets/images/inputpy.png" width="500" height="200"> 
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* Number of duplicate items counts in the list */</p>
+                    <h5>Code:</h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables.append("cabbage") </p>
+                        <p> vegetables.append("potato") </p>
+                        <p> print(vegetables) </p>
+                        <p> print(vegetables.count("cabbage")) </p>
+                        <p> print(vegetables.count("potato")) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">
+                        <div>['bottleguard', 'cabbage', 'brinjal', 'bitterguard', 'potato', 'cabbage', 'potato']</div>
+                        <div>
+                            <div>2</div>
+                            <div>2</div>
+                        </div>
+                    </output>
+                    <p></p>
+                     <img src="./assets/images/inputpy.png" width="500" height="200"> 
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* Total number of items in the list */</p>
+                    <h5>Code:</h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p>print(len(vegetables))</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">7</output>
+                    <p></p>
+                     <img src="./assets/images/inputpy.png" width="500" height="200"> 
+                </div>
+                -->
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
