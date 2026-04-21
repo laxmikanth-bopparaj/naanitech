@@ -10,7 +10,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 		<script>
-			 document.addEventListener("contextmenu", (event) => {
+		 document.addEventListener("contextmenu", (event) => {
 				event.preventDefault();
 			 });
 		</script>
@@ -22,17 +22,11 @@
 					height: 100px;
 				}
 			}
-			@media screen and (max-width: 800px) {
-				.myImg3 {
-					width: 100%;
-					height: 100px;
-				}
-			}
 
-			@media screen and (max-width: 1500px) {
+			@media screen and (max-width: 1450px) {
 				.myImg2 {
 					width: 100%;
-					height: 350;
+					height: auto;
 				}
 			}
 
@@ -75,15 +69,14 @@
 					text-align: center;
 				}
 			}
-			@media screen and (max-width: 1500px) {
 			.pic {
 				border-radius: 10px;
 				background-color: rgb(221, 244, 163);
 				padding: 5px; 
-				width: 100%;
+				max-width: 100%;
 				height: auto;  
 			}
-		}
+			
 		</style>
 	</head>
 
@@ -147,7 +140,7 @@
 								<div class="col-lg-6 col-12 mb-3">
 										<div class="card bg-secondary text-fixed-width text-fixed-width1">
 											<a href="pythonpg1.html">
-												<img src="./assets/images/python.png" class="myImg1 myImg3" width="250" height="150" alt="Python Tutorial">
+												<img src="./assets/images/python.png" class="myImg1" width="250" height="150" alt="Python Tutorial">
 											</a>
 											<div class="card-body p-2">
 												<p class="text-center text-white fw-bold mb-0">
