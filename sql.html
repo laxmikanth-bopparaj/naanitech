@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <title>SQL CONTENT</title>
+
+    <script>
+
+        document.addEventListener("contextmenu", (event) => {
+            event.preventDefault();
+        });
+
+    </script>
+
+    <style>
+        .box {
+            border: 1px;
+            padding: 10px;
+            box-shadow: 5px 5px lightgray;
+        }
+
+        .text-card-box {
+            /* Basic Card Styling */
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px lightblue;
+            /* Soft, standard card shadow */
+        }
+
+        img {
+            max-width: 100%;
+            /* Ensures the image never exceeds the width of its container */
+            height: auto;
+            /* Maintains the aspect ratio */
+            display: block;
+            /* Optional: Helps with layout issues */
+        }
+
+        hr {
+            border: none;
+            /* Removes the default border and 3D effect */
+            height: 2px;
+            /* Sets the thickness of the line */
+            background-color: #333;
+            /* Sets the color of the line */
+            margin: 20px 0;
+            /* Adds spacing above and below the line */
+        }
+
+        h5 {
+            color: rgb(100, 87, 13);
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 5px;
+        }
+        h6 {
+            color:blue;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 5px;
+        }
+        /*
+        p {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: purple;
+            font-weight: bold;
+            line-height: 1.5;
+            margin-bottom: 1em;
+            padding: 5px;
+            text-align: center;
+            background-color: darkseagreen;
+        }
+        */
+                #myBtn {
+				  display: none;
+				  position: fixed;
+				  bottom: 20px;
+				  right: 30px;
+				  z-index: 99;
+				  font-size: 18px;
+				  border: none;
+				  outline: none;
+				  background-color: red;
+				  color: white;
+				  cursor: pointer;
+				  padding: 15px;
+				  border-radius: 4px;
+				}
+                	
+				#myBtn:hover {
+				  background-color: #555;
+				}       
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-warning navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">
+            <img src="./assets/images/lslogo.jpg" alt="logo" style="width:40px;">
+        </a>
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" style="color: black;">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="htmlcontent.html" style="color: black;">HTML</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pythonpg1.html" style="color: black;">PYTHON</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="powerbipg.html" style="color: black;">POWER BI</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container-fluid bg-light" style="margin-top: 15px; margin-bottom: 15px;">
+        <div class="row">
+            <div class="col-lg-2 col-md-6 col-sm-12">
+                <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo"
+                    style="margin-top: 2px;">Links</button>
+                <div id="demo" class="collapse" style="margin-top: 2px;">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sqlintroduction">SQL Introduction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sqlpurpose">SQL PURPOSE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#rdbms">RDBMS</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="#database">DATABASE</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="#sqlcommands">SQL COMMAMDS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-6 col-sm-12">
+                <h2
+                    style="text-align: center; color: purple; font-weight: bold; font-family: cursive; text-shadow: 2px 1px gold">
+                    WHAT IS SQL?</h2>
+                <div class="card text-card-box">
+                    <h5 id="sqlintroduction"><u>SQL:</u></h5>
+                    <p> SQL is a standard query language for sorting, manipulating and retrieving the data in the database.</p>
+                </div>
+                <div class="card text-card-box">
+                    <h5 id="sqlpurpose"><u>What Can SQL do?:</u></h5>
+                    <ul>
+                        <li>	SQL can execute queries against a database	</li>
+                        <li>	SQL can retrieve data from a database	</li>
+                        <li>	SQL can insert records in a database	</li>
+                        <li>	SQL can update records in a database	</li>
+                        <li>	SQL can delete records from a database	</li>
+                        <li>	SQL can create new databases	</li>
+                        <li>	SQL can create new tables in a database	</li>
+                        <li>	SQL can create stored procedures in a database	</li>
+                        <li>	SQL can create views in a database	</li>
+                        <li>	SQL can set permissions on tables, procedures, and views	</li>
+
+                    </ul>
+                </div>
+                <div class="card text-card-box">
+                    <h5 id="rdbms"><u>RDBMS:</u></h5>
+                        <p>RDBMS stands for Relational Database Management System.</p>
+                        <p>
+                            RDBMS is the basis for SQL, and for all modern database systems such as 
+                            MS SQL Server, IBM DB2, Oracle, MySQL, and Microsoft Access.
+                        </p>
+                        <p>
+                            The data in RDBMS is stored in database objects called tables. 
+                            A table is a collection of related data entries and it consists of columns and rows.
+                        </p>
+                </div>
+                <div class="card text-card-box">
+                    <h5 id="database"><u>CREATING A DATABASE:</u></h5>
+                        <p><b>Syntax:</b> CREATE DATABASE DATABASE_NAME</p>
+                </div>
+                <div class="card text-card-box">
+                    <h5 id="sqlcommands"><u>SQL COMMANDS:</u></h5>
+                        <h6>1. Data Query Language (DQL)</h6>
+                            <p>Used specifically for retrieving data from the database. </p>
+                            <p><b>SELECT:</b> Fetches records from one or more tables.</p>
+                        <hr>
+                        <h6>2. Data Manipulation Language (DML)</h6>
+                            <p>Used to add, modify, or delete data within existing table structures. </p>
+                            <p><b>INSERT:</b> Adds new rows to a table.</p>
+                            <p><b>UPDATE:</b> Modifies existing records.</p>
+                            <p><b>DELETE:</b> Removes specific rows based on a condition.</p>
+                        <hr>
+                        <h6>3. Data Definition Language (DDL)</h6>
+                            <p>Used to define and manage the structure (schema) of a database. </p>
+                            <p><b>CREATE:</b> Used to build new database objects.</p>
+                            <p><b>ALTER:</b> Modifies the structure of an existing object, such as adding, deleting, or renaming columns in a table.</p>
+                            <p><b>DROP:</b> Permanently deletes an entire object (like a table) and all its data from the database.</p>
+                            <p><b>TRUNCATE:</b> Removes all records from a table while keeping the table structure intact.</p>
+                            <p><b>RENAME:</b> Changes the name of an existing database object.</p>
+                            <p><b>COMMENT:</b> Adds or modifies descriptive comments about an object in the database's data dictionary.</p>
+                        <hr>
+                        <h6>4. Data Control Language (DCL)</h6>
+                            <p>Used to manage user access, permissions, and security for a database. </p>
+                            <p><b>GRANT:</b> Used to give specific access privileges or permissions (such as SELECT, INSERT, UPDATE, or DELETE) to a user or role on database objects like tables or views.</p>
+                            <p><b>REVOKE:</b> Used to take away or withdraw previously granted permissions from a user or role.</p>
+                        <hr>
+                        <h6>5. Transaction Control Language (TCL)</h6>
+                            <p>Used to manage transactions in a database. A transaction is a sequence of one or more SQL operations treated as a single unit of work.</p>
+                            <p><b>COMMIT:</b> 
+                                Saves all changes made during the current transaction permanently.
+                                After commit, changes cannot be rolled back.
+                            </p>
+                            <p><b>ROLLBACK:</b> 
+                                Undoes all changes made in the current transaction.
+                                Returns the database to the last committed state.
+                            </p>
+                             <p><b>SAVEPOINT:</b> 
+                                Creates a point within a transaction to which you can later roll back.
+                                Useful for partial rollbacks.
+                            </p>
+                
+                </div>  
+                <!--
+                <div class="card text-card-box">
+                    <h5>Allow Duplicates in List:</h5>
+                    <ul>
+                        <li>Lists can have items with the same value, same names, etc.</li>
+                    </ul>
+                </div>
+                -->
+                <p></p>
+                <!-- 
+                <div class="">
+                    <p>/* Accessing the list in python */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p>vegetables = ["potato", "carrot", "tomato", "brinjal"]</p>
+                        <p>print(vegetables)</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['potato', 'carrot', 'tomato', 'brinjal']</output>
+                    <p></p>
+
+                     <img src="./assets/images/vegitables.png" width="300" height="150"> 
+
+                </div>
+                
+                <hr>
+
+                <div class="">
+                    <p>/* Accessing list with index */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> print(vegetables[0]) </p>
+                        <p> print(vegetables[1]) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">
+                        <div>potato</div>
+                        <div>carrot</div>
+                    </output>
+                    <p></p>
+                    <img src="./assets/images/veg1.png" width="500" height="200">
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* Adding items in the list */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables.append("cauliflower") </p>
+                        <p> vegetables.append("ladyfinger") </p>
+                        <p>print(vegetables)</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['potato', 'carrot', 'tomato', 'brinjal', 'cauliflower',
+                        'ladyfinger']</output>
+                    <p></p>
+                    <img src="./assets/images/addvegi.png" width="500" height="200">
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* Inserting items in the list at a particular index position */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables.insert(4, "cabbage") </p>
+                        <p> vegetables.insert(5, "bottleguard") </p>
+                        <p>print(vegetables)</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['potato', 'carrot', 'tomato', 'brinjal', 'cabbage', 'bottleguard',
+                        'cauliflower', 'ladyfinger']</output>
+                    <p></p>
+                    <img src="./assets/images/insertvegi.png" width="500" height="400" class="img1"> 
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* updating items in the list at a particular index position */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables[1:3] = ["bitterguard", "radish"] </p>
+                        <p> print(vegetables) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['potato', 'bitterguard', 'radish', 'brinjal', 'cabbage',
+                        'bottleguard', 'cauliflower', 'ladyfinger']</output>
+                    <p></p>
+                     <img src="./assets/images/separator.png" width="500" height="200"> 
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* removing items in the list from the last */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables.pop() </p>
+                        <p> vegetables.pop() </p>
+                        <p> print(vegetables) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['potato', 'bitterguard', 'radish', 'brinjal', 'cabbage',
+                        'bottleguard']</output>
+                    <p></p>
+                     <img src="./assets/images/datatypes.png" width="500" height="200"> 
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* removing selected items in the list */</p>
+                    <h5>Code: </h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables.remove("radish") </p>
+                        <p> print(vegetables) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['potato', 'bitterguard', 'brinjal', 'cabbage',
+                        'bottleguard']</output>
+                    <p></p>
+                     <img src="./assets/images/variable.png" width="500" height="200"> 
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* reversing the items in the list */</p>
+                    <h5>Code:</h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables.reverse() </p>
+                        <p> print(vegetables) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">['bottleguard', 'cabbage', 'brinjal', 'bitterguard',
+                        'potato']</output>
+                    <p></p>
+                     <img src="./assets/images/inputpy.png" width="500" height="200"> 
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* deleting all the list items */</p>
+                    <h5>Code:</h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p>vegetables.clear() </p>
+                        <p>print(vegetables) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">[]</output>
+                    <p></p>
+                     <img src="./assets/images/inputpy.png" width="500" height="200"> 
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* zip is a method used to combine multiple elements into a single element (list) */</p>
+                    <h5>Code:</h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> tech = ["html", "java", "css", "python"] </p>
+                        <p> course = ["frontend", "backend", "frontend", "backend"] </p>
+                        <p> result = list(zip(tech, course)) </p>
+                        <p> print(result) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">[('html', 'frontend'), ('java', 'backend'), ('css', 'frontend'),
+                        ('python', 'backend')]</output>
+                    <p></p>
+                     <img src="./assets/images/inputpy.png" width="500" height="200"> 
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* Number of duplicate items counts in the list */</p>
+                    <h5>Code:</h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p> vegetables.append("cabbage") </p>
+                        <p> vegetables.append("potato") </p>
+                        <p> print(vegetables) </p>
+                        <p> print(vegetables.count("cabbage")) </p>
+                        <p> print(vegetables.count("potato")) </p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">
+                        <div>['bottleguard', 'cabbage', 'brinjal', 'bitterguard', 'potato', 'cabbage', 'potato']</div>
+                        <div>
+                            <div>2</div>
+                            <div>2</div>
+                        </div>
+                    </output>
+                    <p></p>
+                     <img src="./assets/images/inputpy.png" width="500" height="200"> 
+                </div>
+                <hr>
+                <div class="">
+                    <p>/* Total number of items in the list */</p>
+                    <h5>Code:</h5>
+                    <div class="card" style="width: auto; display: inline-block;">
+                        <p>print(len(vegetables))</p>
+                    </div>
+                </div>
+                <h4>Output:</h4>
+                <div class="card box" style="width: auto; display: inline-block;">
+                    <output class="text-card-box">7</output>
+                    <p></p>
+                     <img src="./assets/images/inputpy.png" width="500" height="200"> 
+                </div>
+                -->
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-12">
+                <button onclick="topFunction()" id="myBtn">Top</button>
+            </div>
+        </div>
+    </div>
+
+                    
+        <script>
+            // Get the button
+            let mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            }
+        </script>
+
+    </body>
+</html>
